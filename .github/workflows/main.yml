@@ -11,7 +11,7 @@ on:
 env:
   DISPATCH_URL: "https://api.github.com/repos/brandon-bird-inf/iics-promotion-pipeline/actions/workflows/iics_deployment.yml/dispatches"
   HEADERS: "Authorization: Bearer ${{ secrets.CICD_TRIGGER_SECRET }}" 
-  BODY: '{ "ref":"main", "inputs":{"committed_sha":"${{ github.sha }}"} }'
+  BODY: '{ "ref":"main", "inputs":{"committed_sha":"${{ github.sha }}"}}'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,4 +25,4 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - run: curl -X ${{ env.DISPATCH_URL }} -H ${{ env.HEADERS }} -d ${{ env.BODY }}
+      - run: curl -X ${{ env.DISPATCH_URL }} -H ${{ env.HEADERS }} -d "${{ env.BODY }}""
