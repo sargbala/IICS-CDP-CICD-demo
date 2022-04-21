@@ -1,0 +1,28 @@
+name: call deployment pipeline
+
+# Controls when the workflow will run
+on:
+  push:
+    branches:
+      - 'Dev'
+  workflow_dispatch:
+    
+
+env:
+  DISPATCH_URL: "https://api.github.com/repos/brandon-bird-inf/iics-promotion-pipeline/actions/workflows/iics_deployment.yml/dispatches"
+  HEADERS: "Authorization: Bearer ${{ secrets.CICD_TRIGGER_SECRET }}" 
+  BODY: '{ "ref":"main", "inputs":{"committed_sha":"${{ github.sha }}"}}'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  call_deployment_pipeline:
+    name: Execute Deployment
+    environment:
+      name: development
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - run: curl -X POST ${{ env.DISPATCH_URL }} -H ${{ env.HEADERS }} -d ${{ env.BODY }}
