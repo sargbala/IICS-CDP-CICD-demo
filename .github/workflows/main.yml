@@ -28,5 +28,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Run deployment workflow
-        if: "false" 
+        if: startsWith(github.event.head_commit.message, 'deploy')
         run: curl -X POST ${{ env.DISPATCH_URL }} -H '${{ env.HEADERS }}' -d '${{ env.BODY }}'
