@@ -6,7 +6,7 @@ on:
     branches:
       - 'Dev'
     paths-ignore:
-      - '.github/*'
+      - '.github/**'
   workflow_dispatch:
     
 
@@ -28,5 +28,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Run deployment workflow
-        if: startsWith( ${{ github.event.head_commit.message }}, 'DEPLOY' ) == true
+        if: "false" 
         run: curl -X POST ${{ env.DISPATCH_URL }} -H '${{ env.HEADERS }}' -d '${{ env.BODY }}'
