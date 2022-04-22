@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "coVdiAbiYgTdgbLHiVhJOL",
+    "id" : "kIgk3rrsbcAkNEANXewDMH",
     "name" : "mt_Errick_CICD_Demo_Contact_DEVOPS2",
     "type" : "MTT",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "0195BR0Z000000000008"
+        "repoHandle" : "0195BS0Z000000000006"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -24,7 +24,30 @@
   },
   "dataFileExtension" : "zip",
   "objectRefs" : [ {
-    "id" : "9vf2CYk8LmfkIcNIdoncOa",
+    "id" : "eHYjUZxx9MFdfsGkiRheKE",
+    "name" : "m_Errick_CICD_Demo_Contact_DEVOPS2",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0195BS17000000000009"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Erricks New CICD Demo"
+  }, {
+    "id" : "0tQLvjHni5Vh6hJOvQefqV",
     "name" : "Oracle",
     "type" : "Connection",
     "metadata" : {
@@ -33,7 +56,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "0195BR0B000000000002"
+        "repoHandle" : "0195BS0B000000000002"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -63,28 +86,5 @@
       }
     },
     "path" : "/SYS"
-  }, {
-    "id" : "8JhWauEWLmXbxc5yrIftwf",
-    "name" : "m_Errick_CICD_Demo_Contact_DEVOPS2",
-    "type" : "DTEMPLATE",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "0195BR17000000000007"
-      },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
-      "additionalInfo" : {
-        "description" : "",
-        "contentType" : "JSON",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/Erricks New CICD Demo"
   } ]
 }
