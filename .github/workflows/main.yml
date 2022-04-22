@@ -23,9 +23,10 @@ jobs:
       name: development
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    if: startsWith( ${{ github.event.head_commit.message }}, 'DEPLOY' ) == true
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - run: curl -X POST ${{ env.DISPATCH_URL }} -H '${{ env.HEADERS }}' -d '${{ env.BODY }}'
+      - name: Run deployment workflow
+        if: startsWith( ${{ github.event.head_commit.message }}, 'DEPLOY' ) == true
+        run: curl -X POST ${{ env.DISPATCH_URL }} -H '${{ env.HEADERS }}' -d '${{ env.BODY }}'
