@@ -16,8 +16,8 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
-        "contentType" : null,
+        "description" : "Adding description to test rollback",
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
