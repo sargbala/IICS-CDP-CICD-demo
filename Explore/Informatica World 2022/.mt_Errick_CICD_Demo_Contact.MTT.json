@@ -37,7 +37,7 @@
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "Adding description to test rollback",
+        "description" : "",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
