@@ -38,7 +38,7 @@
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "",
-        "contentType" : null,
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     },
