@@ -14,6 +14,7 @@ env:
   DISPATCH_URL: "https://api.github.com/repos/brandon-bird-inf/iics-promotion-pipeline/actions/workflows/iics_deployment.yml/dispatches"
   HEADERS: "Authorization: Bearer ${{ secrets.CICD_TRIGGER_SECRET }}" 
   BODY: '{ "ref":"main", "inputs":{"committed_sha":"${{ github.sha }}"}}'
+  JENKINS_URL: http://vm-cicd-all-ip.eastus.cloudapp.azure.com:8080/job/infa_pipeline/buildWithParameters
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,6 +28,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Run deployment workflow
+      - name: Run github workflow
         if: startsWith(github.event.head_commit.message, 'deploy')
         run: curl -X POST ${{ env.DISPATCH_URL }} -H '${{ env.HEADERS }}' -d '${{ env.BODY }}'
+      
+      - name: Run jenkins workflow
+        if: startsWith(github.event.head_commit.message, 'jenkins')
+        run: curl -X POST -L admin:111960e35fdbba1287ad25a4224af511a8 ${{ env.JENKINS_URL }} -d SHA=${{ github.sha }}
