@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Adding description to test rollback",
+        "description" : "This is bad code",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
