@@ -34,4 +34,4 @@ jobs:
       
       - name: Run jenkins workflow
         if: startsWith(github.event.head_commit.message, 'jenkins')
-        run: curl -X POST -L user admin:111960e35fdbba1287ad25a4224af511a8 ${{ env.JENKINS_URL }} -d "HASH=${{ github.sha }}"
+        run: curl -X POST -L user admin:111960e35fdbba1287ad25a4224af511a8 ${{ env.JENKINS_URL }} -d "hash=${{ github.sha }}"
