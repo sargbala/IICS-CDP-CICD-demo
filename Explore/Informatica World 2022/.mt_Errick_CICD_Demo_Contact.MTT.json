@@ -37,7 +37,7 @@
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "",
+        "description" : "This is bad code",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
