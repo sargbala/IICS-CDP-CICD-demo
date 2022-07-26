@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Add description - 12",
+        "description" : "Test Demo - change log size to 21",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
@@ -37,7 +37,7 @@
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "",
+        "description" : "This is bad code",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
