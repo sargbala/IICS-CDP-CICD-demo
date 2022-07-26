@@ -37,8 +37,8 @@ jobs:
       
       - name: Run jenkins workflow
         if: startsWith(github.event.head_commit.message, 'jenkins')
-        run: curl -X POST -L --user admin:111960e35fdbba1287ad25a4224af511a8 ${{ env.JENKINS_URL }} -d "hash=${{ github.sha }}"
+        run: curl -X POST -L --user admin:${{ secrets.JENKINS_TRIGGER_SECRET }} ${{ env.JENKINS_URL }} -d "hash=${{ github.sha }}"
 
       - name: Run azdo workflow
         if: startsWith(github.event.head_commit.message, 'azdo')
-        run: curl -X POST -H '${{ env.AZDO_HEADERS }}' -L --user bbird:m754xywzjqdqez6segohmzr3dq2mvpl5h5wzolrltoeotp4hnjha ${{ env.AZDO_URL }} -d '${{ env.AZDO_BODY }}'
+        run: curl -X POST -H '${{ env.AZDO_HEADERS }}' -L --user bbird:${{ secrets.AZDO_TRIGGER_SECRET }} ${{ env.AZDO_URL }} -d '${{ env.AZDO_BODY }}'
