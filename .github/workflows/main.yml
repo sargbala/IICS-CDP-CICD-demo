@@ -40,4 +40,4 @@ jobs:
 
       - name: Run azdo workflow
         if: startsWith(github.event.head_commit.message, 'azdo')
-        run: curl -X POST -L --user bbird:m754xywzjqdqez6segohmzr3dq2mvpl5h5wzolrltoeotp4hnjha ${{ env.AZDO_URL }} -d '${{ env.AZDO_BODY }}
+        run: curl -X POST -L --user bbird:m754xywzjqdqez6segohmzr3dq2mvpl5h5wzolrltoeotp4hnjha ${{ env.AZDO_URL }} -d '${{ env.AZDO_BODY }}'
