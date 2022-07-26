@@ -16,6 +16,7 @@ env:
   BODY: '{ "ref":"main", "inputs":{"committed_sha":"${{ github.sha }}"}}'
   JENKINS_URL: http://vm-cicd-all-ip.eastus.cloudapp.azure.com:8080/job/infa_pipeline/buildWithParameters
   AZDO_URL: https://dev.azure.com/diteam-dataops/iics-diteam/_apis/pipelines/6/runs?api-version=6.0-preview.1
+  AZDO_HEADERS: "Content-Typeapplication/json"
   AZDO_BODY: '{ "templateParameters": [{"COMMIT_HASH":"${{ github.sha }}"}]	}'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -40,4 +41,4 @@ jobs:
 
       - name: Run azdo workflow
         if: startsWith(github.event.head_commit.message, 'azdo')
-        run: curl -X POST -L --user bbird:m754xywzjqdqez6segohmzr3dq2mvpl5h5wzolrltoeotp4hnjha ${{ env.AZDO_URL }} -d '${{ env.AZDO_BODY }}'
+        run: curl -X POST -H ${{ env.AZDO_HEADERS }} -L --user bbird:m754xywzjqdqez6segohmzr3dq2mvpl5h5wzolrltoeotp4hnjha ${{ env.AZDO_URL }} -d '${{ env.AZDO_BODY }}'
