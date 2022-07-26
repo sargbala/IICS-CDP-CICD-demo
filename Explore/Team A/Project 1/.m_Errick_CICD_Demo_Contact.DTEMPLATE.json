@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "I didnt test this well",
+        "description" : "This mapping is working fine",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
