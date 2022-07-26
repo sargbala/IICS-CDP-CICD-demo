@@ -16,8 +16,8 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "This is bad code",
-        "contentType" : null,
+        "description" : "This code is solid",
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
