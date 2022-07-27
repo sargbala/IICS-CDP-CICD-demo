@@ -16,8 +16,8 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Test Demo - New token",
-        "contentType" : null,
+        "description" : "Test Demo - 8 logs",
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
@@ -37,8 +37,8 @@
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "This is bad code",
-        "contentType" : null,
+        "description" : "This mapping is working fine",
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     },
